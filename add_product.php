@@ -12,6 +12,11 @@ include 'admindashboard.php';
     <title>Document</title>
 </head>
 <body>
+    <?php
+       if(isset($_GET['msg'])){
+        echo "<p>". $_GET['msg']."</p>";
+       }
+    ?>
       <form action="insert_product.php" method="POST">
            <label for="">Product name</label>
            <input type="text" name="productName"> <br>

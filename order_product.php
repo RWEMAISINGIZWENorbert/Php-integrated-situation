@@ -8,9 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-      <h1>Place an order</h1>
+      <h2>Place an order</h2>
       
        <form action="process_order_product.php" method="POST">
             <table border="1">
@@ -34,8 +35,8 @@
                         }
                      ?>       
             </table>
-  
-             <br> <br>
+             <div class="data">
+             <!-- <br> <br> -->
              <label for="">Customer name</label>
              <input type="text" name="customer_name" required><br><br>
 
@@ -49,6 +50,7 @@
               <input type="text">
 
               <button type = 'submit'>Place order</button>
+              </div>
        </form>
 </body>
 </html>
