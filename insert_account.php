@@ -6,7 +6,7 @@
  $username = $_POST['username'];
  $password = $_POST['password'];
 
- if(empty(!$email) || empty(!$username) || empty(!$password)){
+ if(empty($email) || empty($username) || empty($password)){
    header("location: create_accont.php?msg = Please fill the credentials");
  }
 

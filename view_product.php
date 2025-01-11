@@ -1,7 +1,6 @@
 <?php
  include 'admindashboard.php';
  include 'db_connect.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@
                 <?php 
                  $sql = 'SELECT * FROM products';
                  $result = $conn->query($sql);
-                if ($result->num_rows > 0):
+                if ($result->num_rows > 0){
                 
                 ?>
                    <thead>
@@ -31,7 +30,7 @@
                       </tr>
                    </thead>
                    <tbody>
-                   <?php while($row = $result->fetch_assoc()): ?>
+                   <?php while($row = $result->fetch_assoc()){ ?>
                     <tr>
                          <td><?php echo $row['productCode']?></td>
                         <td><?php  echo $row['productName'] ?></td>
@@ -39,13 +38,12 @@
                         <td><?php  echo $row['unit_price'] ?></td>
                         <td><?php  echo $row['total_price'] ?></td>
                         <td>
-                            <a href="update_product.php?productCode =<?php echo $row['productCode']; ?> ">Update</a>
-                            <a href="delete_product.php?productCode =<?php echo $row['productCode']; ?>">delete</a>
+                            <a href="update_product.php?productCode=<?php echo $row['productCode']; ?> ">Update</a>
+                            <a href="delete_product.php?productCode=<?php echo $row['productCode']; ?>">delete</a>
                         </td>
                     </tr>
                    </tbody>
-                   <?php endwhile?>
-                   <?php endif?>
+                   <?php }}?>
             </table>
        </section>
 </body>

@@ -7,10 +7,10 @@
 
    $conn = mysqli_connect($server_name, $user_name, $password, $database);
 
-   if($conn){
-    echo "Connected succesfully";
-   }else{
-    echo "Failed to connect";
-   }
+  //  if($conn){
+  //   echo "Connected succesfully";
+  //  }else{
+  //   echo "Failed to connect";
+  //  }
 
 ?>

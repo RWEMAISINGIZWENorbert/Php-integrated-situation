@@ -3,9 +3,10 @@
   include 'db_connect.php';
   $pcode = $_GET['productCode'];
 
-  $delete_querry = "DELETE FROM products WHERE productCode = '$pcode'";
+  $delete_query = "DELETE FROM products WHERE productCode = '$pcode'";
+  $delete_result = $conn->query($delete_query);
 
-  if(mysqli_query($conn, $delete_querry)) {
+  if($delete_result) {
     echo "<script>
          alert('Product deleted succesfuly');
          window.location.href = 'view_product.php';
