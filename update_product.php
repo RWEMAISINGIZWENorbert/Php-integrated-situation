@@ -4,7 +4,7 @@
 
 $productCode = $_GET['productCode'];
 
-  $sql_command = mysqli_query($conn, "SELECT * FROM products WHERE productCode = '$productCode'");
+$sql_command = mysqli_query($conn, "SELECT * FROM products WHERE productCode = '$productCode'");
   while($row = mysqli_fetch_assoc($sql_command)){
 
 ?>
@@ -19,7 +19,7 @@ $productCode = $_GET['productCode'];
 </head>
 <body>
       <div class="admin-section">
-      <form action="update_product_back.php" method="POST">
+      <form action="./controllers/update_product_back.php" method="POST">
             <label for="">Product Name</label>
             <input type="hidden" name="pcode" value= "<?php echo $row['productCode']?>">
             <input type="text" name="productName" value="<?php echo $row['productName']?>"><br><br>

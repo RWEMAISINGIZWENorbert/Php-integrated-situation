@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
@@ -16,14 +16,14 @@
       }     
      ?>
       <h2>Create Account</h2>   
-     <form action="insert_account.php" method="post">
-        <label for="email">Email Adreess</label>
+      <form action="./controllers/insert_account_controller.php" method="POST">
+        <label for="email">Email Address</label>
         <input type="text" name="email"><br><br>
-        <label for="">Username</label>
-        <input type="text" name="username"><br><br>
-        <label for="">Password</label>
+        <label for="username">Username</label>
+        <input type="text" name="name"><br><br>
+        <label for="password">Password</label>
         <input type="password" name="password"><br>
-        <input type="submit" value="Sign Up"><br>
+        <input type="submit" name="submit" value="Sign Up"><br>
         <div class="credentials">
             <div class="credential1">
             Already have an account? Login <a href="index.php">here</a>
@@ -32,5 +32,6 @@
      </form>
      </div>
      </div>
+</div>
 </body>
 </html>

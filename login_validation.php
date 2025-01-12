@@ -21,7 +21,7 @@
       //  window.location.href = 'admindashboard.php'
      </script>";
      if($_SESSION['email']){
-      header("location: admindashboard.php");
+      header("location: view_product.php");
      }
  }else{
     echo "<script>

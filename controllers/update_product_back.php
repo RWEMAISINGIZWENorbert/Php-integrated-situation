@@ -1,5 +1,5 @@
 <?php
-  include 'db_connect.php';
+  include '../db_connect.php';
 
   $pcode = $_POST['pcode'];
   $productName = $_POST['productName'];
@@ -15,10 +15,7 @@
                                                               WHERE productCode = '$pcode'";                     
 
  if(mysqli_query($conn, $sql_command)) {
-    echo "<script>
-         alert('Product updated succesfuly');
-         window.location.href = 'view_product.php';
-    </script>";
+    header("location: ../view_product.php?successmsg=Product updated succsefully");
  } else{
     echo "<script>
     alert(' Failed to  update the product');

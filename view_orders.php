@@ -14,10 +14,11 @@ include 'admindashboard.php';
 </head>
 <body>
       <div class="admin-section">
-           <div class="header">
-               <h2>View Daily Order Report</h2>
+          <main class="table">
+          <div class="table__header">
+              <h2>All products</h2>
            </div>
-           <main class="table">
+           <!-- <main class="table"> -->
             <table>
                 <thead >
                     <tr>
@@ -60,7 +61,8 @@ include 'admindashboard.php';
                         }
                  ?>
             </table>
-           </main>
+           <!-- </main> -->
+                    </main>
       </div>
 </body>
 </html>

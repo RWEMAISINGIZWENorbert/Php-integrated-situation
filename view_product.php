@@ -14,9 +14,10 @@
 <body>
     <div class="admin-section">
        <main class="table">
-        <div class="table__header">
-              <h4>All products</h4>
-        </div>
+          <div class="table__header">
+              <h2>All products</h2>
+           </div>
+           <div class="table__body">
             <table>
                 <?php 
                  $sql = 'SELECT * FROM products';
@@ -41,8 +42,8 @@
                         <td><?php  echo $row['productName'] ?></td>
                         <td><?php  echo $row['product_quantity']  ?></td>
                         <td><?php  echo $row['unit_price'] ?></td>
-                        <td><?php  echo $row['total_price'] ?></td>
-                        <td>
+                        <td><?php  echo $row['total_price'] ?> frw</td>
+                        <td class="actions">
                             <a href="update_product.php?productCode=<?php echo $row['productCode']; ?> ">Update</a>
                             <a href="delete_product.php?productCode=<?php echo $row['productCode']; ?>">delete</a>
                         </td>
@@ -50,6 +51,7 @@
                    </tbody>
                    <?php }}?>
             </table>
+            </div>
                    </main>
        </div>
 </body>

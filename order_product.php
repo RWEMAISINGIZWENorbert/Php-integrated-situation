@@ -20,7 +20,7 @@
                         <th>Product name</th>
                         <th>Product  Quantity</th>
                         <th>Unity price</th>
-                        <th>Order Quantity</th>
+                        <th>Actions</th>
                      </tr>
                      <?php
                         $querry = mysqli_query($conn, 'SELECT * FROM products');
@@ -30,7 +30,8 @@
                           echo "<td>" . $row['productName']. "</td>";   
                           echo "<td>" . $row['product_quantity']. "</td>";   
                           echo "<td>" . $row['unit_price']. "</td>";   
-                          echo "<td> <input type = 'number' name = 'order_quantities[". $row['productCode']. "]' min = '1' max ='". $row['product_quantity'] . "' value = '1'" ."</td>"; 
+                          echo "<td>" . "<button>Add To Cart</button>". "</td>";   
+                        //   echo "<td> <input type = 'number' name = 'order_quantities[". $row['productCode']. "]' min = '1' max ='". $row['product_quantity'] . "' value = '1'" ."</td>"; 
                           echo "</tr>";  
                         }
                      ?>       
@@ -44,7 +45,7 @@
               <input type="text" name="location">
 
               <label for="telephone">Phone number</label>
-              <input type="tel" name="telephone" required>
+              <input type="text" name="telephone" required>
 
               <label for="location">Place order</label>
               <input type="text">
