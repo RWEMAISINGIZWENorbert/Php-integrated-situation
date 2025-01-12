@@ -3,6 +3,10 @@
     font-family: 'poppins',sans-serif;
 }
 
+body{
+    background: transparent;
+}
+
 .login-section{
     display: flex;
     justify-content: center;
@@ -26,9 +30,11 @@
     border-radius: 8px;
 }
 
-.inner-section h2{
+.inner-section h2,
+h2{
     text-align: center;
     color: rgb(23, 90, 23);
+    background: transparent;
 }
 
 .inner-section form{
@@ -42,7 +48,8 @@
 form label,
 form input,
 form .credentials,
-form a{
+form a,
+a{
     background: transparent;
 }
 
@@ -51,7 +58,8 @@ form label{
 }
 
 form input[type = "text"],
-form input[type = "password"]{
+form input[type = "password"],
+form input[type = "number"]{
     width: 100%;
     border: 2px solid rgba(175, 171, 171, 0.5);
     outline: none;
@@ -86,4 +94,215 @@ form .credentials .credential1{
 }
 
 /* Start the Admin dashboard design */
+.side-bar{
+    background: rgb(219, 218, 218);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right-width: 2rem;
+    border-color: black;
+    padding-top: 4rem;
+}
 
+/* .side-bar .items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bar .items .item1{
+    display: flex;
+    flex-direction: column;
+} */
+
+.side-bar a{
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.side-bar a.logout{
+    margin-top: 5rem;
+}
+
+.side-bar a:hover{
+    color: rgb(23, 90, 23);
+}
+
+.side-bar a:active,
+.side-bar a.active{
+    color: rgb(23, 90, 23);
+}
+
+.admin-section{
+    width: 65%;
+    margin-left: 24rem;
+    background-color: transparent;
+}
+
+.admin-section h2{
+    background-color: transparent;
+}
+
+.admin-section form{
+    background-color: transparent;
+}
+
+p.msg{
+    background: transparent;
+    text-align: center;
+    color: red;
+}
+
+.admin-section form input{
+    width: 55%;
+    margin-left: 8px;
+    outline: 1px solid rgb(23, 90, 23);
+}
+
+/* .admin-section form input:active{
+    outline: 2px solid rgb(23, 90, 23);
+} */
+
+
+.admin-section .add{
+    display: flex;
+    justify-content: end;
+    background-color: transparent;
+}
+
+.admin-section .admin-submit{
+    width: 25%;
+}
+
+
+/* main.table{
+    width: 82vw;
+    height: 60vh;
+    background: #fff5;
+    margin: .5rem 7rem;
+}
+ 
+.table__header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.table__header h4{
+    margin-left: 4rem;
+    background: var(--bg2-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+tbody{
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    transition: all 0.3s ease;
+}
+
+tbody::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+tbody::-webkit-scrollbar-thumb{
+    border-radius: 2rem;
+    background: rgba(61, 61, 61, 0.333);
+    background: var(--focus-color);
+    transition: all 0.3s ease;
+    visibility: hidden;
+}
+
+tbody:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+table{
+    width: 100%;
+}
+
+
+table, td, th{
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #d5d1defe;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+}
+
+tbody tr:hover{
+    background-color: #fff6;
+}
+
+table tbody tr td .icon{
+    font-size: 1.12rem;
+    padding: 7px;
+    border-radius: 8px;
+    border: 1px solid rgb(190, 189, 189);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+table tbody tr td .icon:hover{
+    background: red;
+    color: #fff;
+} */
+
+main.table{
+    width: 52vw;
+    height: 60vh;
+    background: #fff5;
+    margin: .5rem 7rem;
+}
+
+
+table{
+    background-color: transparent;
+}
+
+table{
+    width: 100%;
+}
+
+
+table, td, th{
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #d5d1defe;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+}

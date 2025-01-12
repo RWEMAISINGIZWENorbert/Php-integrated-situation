@@ -15,8 +15,10 @@ $productCode = $_GET['productCode'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update product</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
+      <div class="admin-section">
       <form action="update_product_back.php" method="POST">
             <label for="">Product Name</label>
             <input type="hidden" name="pcode" value= "<?php echo $row['productCode']?>">
@@ -27,6 +29,7 @@ $productCode = $_GET['productCode'];
             <input type="text" name="unityPrice" value="<?php echo $row['unit_price']?>"><br><br>
             <input type="submit" value="Update Product">
       </form>
+      </div>
       <?php 
 
 }?>

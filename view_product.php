@@ -9,9 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-       <section>
+    <div class="admin-section">
+       <main class="table">
+        <div class="table__header">
+              <h4>All products</h4>
+        </div>
             <table>
                 <?php 
                  $sql = 'SELECT * FROM products';
@@ -45,6 +50,7 @@
                    </tbody>
                    <?php }}?>
             </table>
-       </section>
+                   </main>
+       </div>
 </body>
 </html>

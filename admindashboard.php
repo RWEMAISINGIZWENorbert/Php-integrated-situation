@@ -7,8 +7,12 @@
      <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-      <a href="add_product.php">Add products</a>
+      <div class="side-bar">
+      <a href="add_product.php" class="active">Add products</a>
       <a href="view_product.php">View Products</a>
       <a href="view_orders.php">View Orders</a>
+      <a href="" class="logout">Logout</a>
+      </div>
+      </div>
 </body>
 </html>
