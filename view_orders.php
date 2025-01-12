@@ -4,7 +4,6 @@ include 'admindashboard.php';
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +31,7 @@ include 'admindashboard.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
+                    <?php   
                       $sql = "SELECT * FROM customer";
                       $result = $conn->query($sql);
                       if($result->num_rows > 0){

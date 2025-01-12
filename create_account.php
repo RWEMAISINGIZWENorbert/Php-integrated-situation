@@ -12,15 +12,15 @@
 <div class="inner-section">    
       <?php
       if(isset($_GET['msg'])){
-           echo "<p>". $_GET['msg']."</p>";
+           echo "<p class='error'>". $_GET['msg']."</p>";
       }     
      ?>
       <h2>Create Account</h2>   
      <form action="insert_account.php" method="post">
         <label for="email">Email Adreess</label>
-        <input type="text" name="email"><br>
+        <input type="text" name="email"><br><br>
         <label for="">Username</label>
-        <input type="text" name="username"><br>
+        <input type="text" name="username"><br><br>
         <label for="">Password</label>
         <input type="password" name="password"><br>
         <input type="submit" value="Sign Up"><br>

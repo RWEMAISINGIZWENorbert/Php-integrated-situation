@@ -57,6 +57,11 @@ form label{
     font-size: large;
 }
 
+p.error{
+    background: transparent;
+    color: red;
+}
+
 form input[type = "text"],
 form input[type = "password"],
 form input[type = "number"]{
