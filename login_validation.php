@@ -14,12 +14,13 @@
  
  if($sql_command -> num_rows > 0){
     $result = mysqli_fetch_assoc($sql_command);
+    // print_r($result);
     session_start();
     $_SESSION['email'] = $email;
-     echo "<script>
-       alert('login successfully done');
-      //  window.location.href = 'admindashboard.php'
-     </script>";
+    //  echo "<script>
+    //    alert('login successfully done');
+    //   //  window.location.href = 'admindashboard.php'
+    //  </script>";
      if($_SESSION['email']){
       header("location: view_product.php");
      }

@@ -5,7 +5,8 @@
 $productCode = $_GET['productCode'];
 
 $sql_command = mysqli_query($conn, "SELECT * FROM products WHERE productCode = '$productCode'");
-  while($row = mysqli_fetch_assoc($sql_command)){
+//   while($row = mysqli_fetch_assoc($sql_command)){
+while($row = $sql_command -> fetch_assoc()){
 
 ?>
 

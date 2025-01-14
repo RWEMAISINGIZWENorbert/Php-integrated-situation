@@ -12,9 +12,12 @@
                                                               product_quantity = '$productQuantity', 
                                                               unit_price = '$unityPrice', 
                                                               total_price = '$total_price' 
-                                                              WHERE productCode = '$pcode'";                     
+                                                              WHERE productCode = '$pcode'";  
+                                                              
+                                                              
+    $result = $conn->query($sql_command);                                                          
 
- if(mysqli_query($conn, $sql_command)) {
+ if($result) {
     header("location: ../view_product.php?successmsg=Product updated succsefully");
  } else{
     echo "<script>

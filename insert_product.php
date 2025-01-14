@@ -12,30 +12,23 @@
 
  $total_price = $product_quantity * $unity_price;
 
-//  Check if Product alrraedy exists
 $check_sql  = "SELECT * FROM products WHERE productName = '$product_name'";
 $check_result = $conn->query($check_sql);
 
 if($check_result -> num_rows > 0){
    header("location: add_product.php?msg=Product Already exists");
 }else{
-//  Insert in the database table
 $sql = "INSERT INTO products (productName, product_quantity, unit_price, total_price) VALUES ('$product_name','$product_quantity', '$unity_price', '$total_price')";
-//  $sql_command =  mysqli_query($conn, $insert);
-
-$sql_command = mysqli_query($conn, $sql);
+$sql_command = $conn -> query($sql);
  
  if($sql_command){
-    echo "<script>
-                 alert('Product succesfully added');
-               //   window.location.href = 'view_product.php';
-              <script/>";
-              header("location: view_product.php");
+   //  echo "<script>
+   //               alert('Product succesfully added');
+   //             //   window.location.href = 'view_product.php';
+   //            <script/>";
+              header("location: view_product.php?successmsg = Product inserted succesfully");
  }else{
-    echo "<script>
-              alert('Failed to add the new Product');
-               // window.location.href = 'add_product.php';
-           <script/>";
+   header('location: add_product.php?failmsg = Error occured in the process');
  }
 }
 

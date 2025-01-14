@@ -30,8 +30,8 @@
                           echo "<td>" . $row['productName']. "</td>";   
                           echo "<td>" . $row['product_quantity']. "</td>";   
                           echo "<td>" . $row['unit_price']. "</td>";   
-                          echo "<td>" . "<button>Add To Cart</button>". "</td>";   
-                        //   echo "<td> <input type = 'number' name = 'order_quantities[". $row['productCode']. "]' min = '1' max ='". $row['product_quantity'] . "' value = '1'" ."</td>"; 
+                          // echo "<td>" . "<button>Add To Cart</button>". "</td>";   
+                          echo "<td> <input type = 'number' name = 'order_quantities[". $row['productCode']. "]' min = '1' max ='". $row['product_quantity'] . "' value = '1'" ."</td>"; 
                           echo "</tr>";  
                         }
                      ?>       

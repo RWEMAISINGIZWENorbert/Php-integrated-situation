@@ -13,7 +13,8 @@
       <a href="view_product.php" class="active">View Products</a>     
       <a href="add_product.php">Add products</a>
       <a href="view_orders.php">View Orders</a>
-      <a href="" class="logout">Logout</a>
+      <!-- <a href=""class="logout">Logout</a> -->
+       <a href="./controllers/logout_controller.php" class="logout">Logout</a>
       </div>
       </div>
 </body>

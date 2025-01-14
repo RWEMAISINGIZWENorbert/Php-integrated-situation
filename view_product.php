@@ -2,7 +2,6 @@
  include 'admindashboard.php';
  include 'db_connect.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,11 @@
 </head>
 <body>
     <div class="admin-section">
+        <?php
+          if(isset($_GET['successmsg'])){
+            echo "<p>".$_GET['successmsg'] ."</p>";
+          }
+        ?>
        <main class="table">
           <div class="table__header">
               <h2>All products</h2>
@@ -23,7 +27,7 @@
                  $sql = 'SELECT * FROM products';
                  $result = $conn->query($sql);
                 if ($result->num_rows > 0){
-                
+                  
                 ?>
                    <thead>
                       <tr>
@@ -36,7 +40,9 @@
                       </tr>
                    </thead>
                    <tbody>
-                   <?php while($row = $result->fetch_assoc()){ ?>
+                   <?php while($row = $result->fetch_assoc()){
+                    // print_r($row);
+                    ?>
                     <tr>
                          <td><?php echo $row['productCode']?></td>
                         <td><?php  echo $row['productName'] ?></td>
@@ -44,7 +50,7 @@
                         <td><?php  echo $row['unit_price'] ?></td>
                         <td><?php  echo $row['total_price'] ?> frw</td>
                         <td class="actions">
-                            <a href="update_product.php?productCode=<?php echo $row['productCode']; ?> ">Update</a>
+                            <a href="update_product.php?productCode=<?php echo $row['productCode']; ?>">Update</a>
                             <a href="delete_product.php?productCode=<?php echo $row['productCode']; ?>">delete</a>
                         </td>
                     </tr>
