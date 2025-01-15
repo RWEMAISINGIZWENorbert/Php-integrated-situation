@@ -313,8 +313,8 @@ table, td, th{
 }
 
 thead{
-    position: sticky;
-    top: 0;
+    /* position: sticky; */
+    /* top: 0; */
     left: 0;
     /* background: #e6e5e7fe; */
     background: transparent;

@@ -10,11 +10,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/index.css">
 </head>
+<style>
+     table tr:nth-child(even){
+        background-color: rgb(199, 196, 196);
+     } 
+     p.successmsg{
+       background: transparent;
+       color: rgb(23, 90, 23);
+       margin-left: 20rem;
+     }
+</style>
 <body>
+   <?php
+      if(isset($_SESSION['email'])){
+   ?>
     <div class="admin-section">
         <?php
           if(isset($_GET['successmsg'])){
-            echo "<p>".$_GET['successmsg'] ."</p>";
+            echo "<p class = 'successmsg'>".$_GET['successmsg'] ."</p>";
           }
         ?>
        <main class="table">
@@ -60,5 +73,8 @@
             </div>
                    </main>
        </div>
+       <?php }else{
+          header("location: index.php");
+       }?>
 </body>
 </html>

@@ -33,7 +33,9 @@ table, th, td {
 th, td {
     padding: 12px;
     text-align: left;
+    /* color: #1f1e1e; */
 }
+
 
 th {
     background-color: #f2f2f2;

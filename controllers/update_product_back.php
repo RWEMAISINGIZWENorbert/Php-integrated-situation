@@ -18,7 +18,7 @@
     $result = $conn->query($sql_command);                                                          
 
  if($result) {
-    header("location: ../view_product.php?successmsg=Product updated succsefully");
+    header("location: ../view_product.php?successmsg=Product ". $pcode ." updated succsefully");
  } else{
     echo "<script>
     alert(' Failed to  update the product');
